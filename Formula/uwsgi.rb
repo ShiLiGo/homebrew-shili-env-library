@@ -84,7 +84,7 @@ class Uwsgi < Formula
       end
   
       system python3, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python3"
-      system python27, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python"
+      system python27, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python2"
   
       bin.install "uwsgi"
     end
