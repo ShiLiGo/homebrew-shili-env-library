@@ -38,7 +38,7 @@ class Uwsgi < Formula
     end
 
     def python27
-        "python2.7"
+        "python"
     end
   
     def install
