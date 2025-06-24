@@ -1,4 +1,4 @@
-class UwsgiATpy27 < Formula
+class Uwsgi < Formula
     desc "Full stack for building hosting services"
     homepage "https://uwsgi-docs.readthedocs.io/en/latest/"
     url "https://files.pythonhosted.org/packages/6f/f0/d794e9c7359f488b158e88c9e718c5600efdb74a0daf77331e5ffb6c87c4/uwsgi-2.0.30.tar.gz"
