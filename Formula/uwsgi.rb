@@ -22,6 +22,7 @@ class Uwsgi < Formula
     depends_on "python@3.13"
     depends_on "sqlite"
     depends_on "yajl"
+    depends_on "python@2"
   
     uses_from_macos "curl"
     uses_from_macos "libxcrypt"
@@ -38,7 +39,7 @@ class Uwsgi < Formula
     end
 
     def python27
-        "python"
+        Formula["python@2"].opt_bin/"python"
     end
   
     def install

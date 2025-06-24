@@ -186,7 +186,8 @@ class PythonAT2 < Formula
       rm prefix/"Frameworks/Python.framework/Versions/Current"
   
       # Remove the site-packages that Python created in its Cellar.
-      site_packages_cellar.rmtree
+      #rmtree deprecated in the new homebrew version
+      # site_packages_cellar.rmtree
   
       (libexec/"setuptools").install resource("setuptools")
       (libexec/"pip").install resource("pip")
