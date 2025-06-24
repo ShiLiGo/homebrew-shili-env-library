@@ -92,7 +92,33 @@ class PythonAT2 < Formula
       end
   
       # Avoid linking to libgcc https://code.activestate.com/lists/python-dev/112195/
-    #   args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
+      #Traceback (most recent call last):
+      # File "./setup.py", line 2352, in <module>
+      # main()
+      # File "./setup.py", line 2347, in main
+      # 'Lib/smtpd.py']
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/core.py", line 151, in setup
+      # dist.run_commands()
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/dist.py", line 953, in run_commands
+      # self.run_command(cmd)
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/dist.py", line 972, in run_command
+      # cmd_obj.run()
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/command/build.py", line 127, in run
+      # self.run_command(cmd_name)
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/cmd.py", line 326, in run_command
+      # self.distribution.run_command(command)
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/dist.py", line 972, in run_command
+      # cmd_obj.run()
+      # File "/private/tmp/pythonA2-20250624-66822-1on14r/Python-2.7.18/Lib/distutils/command/build_ext.py", line 340, in run
+      # self.build_extensions()
+      # File "./setup.py", line 228, in build_extensions
+      # missing = self.detect_modules()
+      # File "./setup.py", line 805, in detect_modules
+      # (tuple(int(n) for n in dep_target.split('.')[0:2])
+      # AttributeError: 'int' object has no attribute 'split'
+      # make: *** [sharedmods] Error 1
+      #注释该行，修复以上异常
+      #   args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
   
       # We want our readline and openssl! This is just to outsmart the detection code,
       # superenv handles that cc finds includes/libs!
