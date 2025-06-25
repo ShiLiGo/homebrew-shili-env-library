@@ -20,8 +20,8 @@ class ProtobufAT250 < Formula
     # Install editor support and examples
     doc.install %w( editors examples )
 
-    if build.with? 'python'
-      chdir 'python' do
+    if build.with?("python@2")
+      chdir "python" do
         ENV['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'cpp'
         ENV.append_to_cflags "-I#{include}"
         ENV.append_to_cflags "-L#{lib}"
