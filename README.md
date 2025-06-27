@@ -62,7 +62,7 @@
 
 ### VSCode
     #Python项目设置终端默认进入虚拟环境
-    右下角选择 Python 版本-输入解释器路径-粘贴/usr/local/var/www/python-venvs/my-env/bin/python
+    右下角选择 Python 版本-输入解释器路径-输入 /usr/local/var/www/python-venvs/my-env/bin/python
 
 ### sequel ace
 
