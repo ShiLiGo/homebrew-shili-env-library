@@ -1,9 +1,13 @@
 # homebrew-shili-env-library
 
-Mac 本地开发环境安装教程
+# Mac 本地开发环境安装教程
 
-1、安装Homwbrew
+## 1、基础软件安装
 
+## Xcode
+    App Store 搜索 Xcode
+
+## homebrew
     # 下载安装脚本
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh > homebrew-install.sh
     # 切换安装包源，加速下载
@@ -15,16 +19,14 @@ Mac 本地开发环境安装教程
     # 执行安装脚本
     bash homebrew-install.sh
 
-2、安装 VSCODE
+## VSCode
 
     brew install --cask visual-studio-code
 
-3、安装 Xcode，App Store搜索 Xcode
-
-4、安装 Docker-Desktop
+## Docker-Desktop
 
     brew install --cask docker-desktop
 
-5、安装sequel ace
+## sequel ace
 
     brew install --cask sequel-ace
