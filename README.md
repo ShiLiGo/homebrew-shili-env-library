@@ -50,13 +50,19 @@
     brew install python@3.10 
     brew install shiligo/shili-env-library/uwsgi 
     brew install shiligo/shili-env-library/nginx
+    # 创建 Python 虚拟环境
+    mkdir -p /usr/local/var/www/python-venvs && cd /usr/local/var/www/python-venvs
+    python3 -m venv my-env
+    source my-env/bin/activate
+    pip install -r my-requirement.txt
     #启动 nginx 服务
     brew services start nginx
     #启动 uwsgi 服务
     brew service start uwsgi
 
 ### VSCode
-    todo
+    #Python项目设置终端默认进入虚拟环境
+    右下角选择 Python 版本-输入解释器路径-粘贴/usr/local/var/www/python-venvs/my-env/bin/python
 
 ### sequel ace
 
