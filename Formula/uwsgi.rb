@@ -6,16 +6,6 @@ class Uwsgi < Formula
     license "GPL-2.0-or-later"
     head "https://github.com/unbit/uwsgi.git", branch: "master"
   
-    bottle do
-      sha256 arm64_sequoia: "b2386757296c38cd05ba889d19d2bc6d29c07ba6124657f1d905965fc3da1e1a"
-      sha256 arm64_sonoma:  "45c740b6194c9740b2d88e40a67ebf5d6019869e13faf2b40d6cf747a87808d3"
-      sha256 arm64_ventura: "dd78e316d8d60fc40c16425d7bd57788725052921e79bd1291a81c81f1c3b00d"
-      sha256 sonoma:        "8c1aff88354475b992347f8449ef581753a402dce09b4318d6c6ef1c378d4e65"
-      sha256 ventura:       "0de8c5fcee50137e7e2346567afb07ec1fa9b995bd3392604f1e3e812393824e"
-      sha256 arm64_linux:   "472b257c4aa0a1ff3d7e915bda3196681cc459de6964b19d9670cf26ee3516e1"
-      sha256 x86_64_linux:  "3c27e5bd84f5135985cce5e2c13f8a7845074bab10040fccf09caa9d0bc0e4d9"
-    end
-  
     depends_on "pkgconf" => :build
     depends_on "openssl@3"
     depends_on "pcre2"

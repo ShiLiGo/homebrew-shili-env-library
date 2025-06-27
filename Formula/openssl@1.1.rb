@@ -13,18 +13,6 @@ class OpensslAT11 < Formula
 
   no_autobump! because: :requires_manual_review
 
-  bottle do
-    rebuild 1
-    sha256 arm64_sequoia:  "e49b48327359eb6f1e1a0c67f4810105d803b560cd0d70c7247f2157f7cffe61"
-    sha256 arm64_sonoma:   "00fe912a43983918e60fa5b009e81347c7775c6bfbcd89ee067dc293f35547f9"
-    sha256 arm64_ventura:  "eaec02db0f43d4f11ff1299ecbcbe182ea30af62b22e5cfaaf6b77d5bbbddbbb"
-    sha256 arm64_monterey: "edb44a1452fe8d30491d156b0cdad749027f2daf80d4e0f04953ee2b192f7dc4"
-    sha256 sonoma:         "8b6e4ba1f184ffe1f74c66e028887aba08c1810ae7c5ed226fe491a6de8bc8e1"
-    sha256 ventura:        "8111bc5385b46990584fa3fc1ecd20b0f0532fa20a7efbef2a5f4ebe2ca5ba2d"
-    sha256 monterey:       "aee993c9e2f76f76b6015446c786ca9fbebf20486c34a52d5047a843bb50fc30"
-    sha256 x86_64_linux:   "076d0f3ec7d6938cd2b360ca39a4f70395214d0a545fe0fa8a6c5d23659b65c2"
-  end
-
   keg_only :versioned_formula
 
   # See: https://www.openssl.org/policies/releasestrat.html
