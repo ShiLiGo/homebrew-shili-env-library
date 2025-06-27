@@ -81,8 +81,18 @@
     #2、拉取 redis 镜像
     docker pull redis:latest
     #3、启动本地 redis 服务
-    docker run --name my-redis-container -v /path/to/your/rdb/file/:/data -p 6379:6379 -d redis:latest
+    docker run --name my-redis-container \
+        -v /path/to/your/rdb/file/:/data \
+        -p 6379:6379 \
+        -d redis:latest
     #4、拉取 MySQL 镜像
     docker pull circleci/mysql:5.7.36
     #5、启动本地 Mysql 服务
-    docker run --name my-mysql-container -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_PASSWORD=123456 -e MYSQL_USER=duoletest -e MYSQL_DATABASE=test_zhuoji -v /path/to/your/sql.gz/file/duole.sql.gz:/docker-entrypoint-initdb.d/duole.sql.gz -p 3306:3306 -d circleci/mysql:5.7.36
+    docker run --name my-mysql-container \
+        -e MYSQL_ROOT_PASSWORD=123456 \
+        -e MYSQL_PASSWORD=123456 \
+        -e MYSQL_USER=duoletest \
+        -e MYSQL_DATABASE=test_zhuoji 
+        -v /path/to/your/sql.gz/file/duole.sql.gz:/docker-entrypoint-initdb.d/duole.sql.gz \
+        -p 3306:3306 \
+        -d circleci/mysql:5.7.36
