@@ -68,7 +68,8 @@
     #Python项目配置调试启动
     1、左侧侧边栏-运行和调试
     2、创建 launch.json 文件
-    3、配置启动文件
+    3、选择调试器-Python Debugger 调试配置-带有参数的 Python 文件
+    4、配置模板
     {
         // 使用 IntelliSense 了解相关属性。 
         // 悬停以查看现有属性的描述。
