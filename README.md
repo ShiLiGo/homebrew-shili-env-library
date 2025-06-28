@@ -57,6 +57,8 @@
     解决方案：拷贝缺少的配置文件和目录到 Debug 目录下
     2、M 系列芯片运行 C++程序 Build Failed
     解决方案：todo
+    3、Xcode16.4 Constant expression evaluates to -2 which cannot be narrowed to type 'const unsigned int'
+    解决方案：业务上做调整，不使用负数code
 
 ### homebrew
 
