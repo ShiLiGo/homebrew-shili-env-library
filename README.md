@@ -109,17 +109,18 @@
     "registry-mirrors": [
         "https://docker.xuanyuan.me"
     ]
-    #1、下载最新的 redis 文件备份（rdb 文件）
-    #2、拉取 redis 镜像
+    #启动本地 MySQL 和 Redis 数据库
+    1、下载最新的 redis 文件备份（rdb 文件）
+    2、拉取 redis 镜像
     docker pull redis:latest
-    #3、启动本地 redis 服务
+    3、启动本地 redis 服务
     docker run --name my-redis-container \
         -v /path/to/your/rdb/file/:/data \
         -p 6379:6379 \
         -d redis:latest
-    #4、拉取 MySQL 镜像
+    4、拉取 MySQL 镜像
     docker pull circleci/mysql:5.7.36
-    #5、启动本地 Mysql 服务
+    5、启动本地 Mysql 服务
     docker run --name my-mysql-container \
         -e MYSQL_ROOT_PASSWORD=123456 \
         -e MYSQL_PASSWORD=123456 \
