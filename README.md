@@ -40,9 +40,21 @@
 ## 2. 软件环境配置
 
 ### Xcode
+    
+    #进入到Debug程序目录
+    顶部菜单栏->Product->Show Build Folder in Finder->进入 ./Products/Debug
+
+    #拷贝C++程序配置到执行目录
+    cd /path/to/your/project/root/
+    find . -name '*.conf' -type f ! -name '*redis*' -exec cp {} /path/to/your/Debug/ \;
+
+    #生成C++程序统一启动脚本
+    cd /path/to/your/Debug/
+    ls | grep -v conf | grep -v log | grep -v nohup  | awk '{print "nohup","./"$1,"&"}' | tee -a start.sh
+
     #Xcode启动 C++程序时可能会遇到的问题
-    1、/Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf: No such file or directory, file = /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf) in CLuaIni::LoadFile()
-    解决方案：顶部菜单栏->Product->Show Build Folder in Finder->进入 ./Products/Debug，拷贝缺少的配置文件和目录到当前目录下
+    1、Call luaL_dofile is failed(ErrInfo=cannot open /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf: No such file or directory, file = /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf) in CLuaIni::LoadFile()
+    解决方案：拷贝缺少的配置文件和目录到 Debug 目录下
     2、M 系列芯片运行 C++程序 Build Failed
     解决方案：todo
 
