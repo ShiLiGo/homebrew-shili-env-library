@@ -52,7 +52,7 @@
     cd /path/to/your/Debug/
     ls | grep -v conf | grep -v log | grep -v nohup  | awk '{print "nohup","./"$1,"&"}' | tee -a start.sh
 
-    #Xcode启动 C++程序时可能会遇到的问题
+    #Xcode启动C++程序时可能会遇到的问题
     1、Call luaL_dofile is failed(ErrInfo=cannot open /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf: No such file or directory, file = /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf) in CLuaIni::LoadFile()
     解决方案：拷贝缺少的配置文件和目录到 Debug 目录下
     2、M 系列芯片运行 C++程序 Build Failed
