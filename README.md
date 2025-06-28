@@ -69,23 +69,23 @@
     1、左侧侧边栏-运行和调试
     2、创建 launch.json 文件
     3、配置启动文件
-        {
-            // 使用 IntelliSense 了解相关属性。 
-            // 悬停以查看现有属性的描述。
-            // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
-            "version": "0.2.0",
-            "configurations": [
-                {
-                    "name": "Python 调试程序: 包含参数的当前文件",
-                    "type": "debugpy",
-                    "request": "launch",
-                    "program": "${workspaceFolder}/webpy_zjmj.py", #web程序入口
-                    "console": "integratedTerminal",
-                    "args": "8081", #监听端口号
-                    "justMyCode": false, #是否只调试业务代码，设置成false可以调试系统模块的代码
-                }
-            ]
-        }
+    {
+        // 使用 IntelliSense 了解相关属性。 
+        // 悬停以查看现有属性的描述。
+        // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python 调试程序: 包含参数的当前文件",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/webpy_zjmj.py", #web程序入口
+                "console": "integratedTerminal",
+                "args": "8081", #监听端口号
+                "justMyCode": false, #是否只调试业务代码，设置成false可以调试系统模块的代码
+            }
+        ]
+    }
 
 ### sequel ace
 
