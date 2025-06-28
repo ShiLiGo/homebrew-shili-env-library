@@ -20,7 +20,7 @@
     echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"' >> ~/.bash_profile
     echo 'export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"' >> ～/.bash_profile
     source ~/.bash_profile
-    
+
     # 执行安装脚本
     bash homebrew-install.sh
 
@@ -40,7 +40,9 @@
 ## 2. 软件环境配置
 
 ### Xcode
-    todo
+    #Xcode启动 C++程序时可能会遇到的问题
+    1、/Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf: No such file or directory, file = /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf) in CLuaIni::LoadFile()
+    解决方案：顶部菜单栏->Product->Show Build Folder in Finder->进入 ./Products/Debug，拷贝缺少的配置文件和目录到当前目录下
 
 ### homebrew
 
