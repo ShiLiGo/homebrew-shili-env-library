@@ -87,7 +87,11 @@
             }
         ]
     }
-
+    5、运行-启动调试（断点调试）、以非调试模式运行（前台启动）
+    #Python项目配置调试启动可能会碰到的问题
+    1、ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/Cellar/python@3.10/3.10.18/Frameworks/Python.framework/Versions/3.10/lib/python3.10/collections/__init__.py)
+    解决方案: pip install --upgrade PyJWT
+    
 ### sequel ace
 
     1、打开sequel ace
