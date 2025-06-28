@@ -155,7 +155,7 @@
         -e MYSQL_ROOT_PASSWORD=123456 \
         -e MYSQL_PASSWORD=123456 \
         -e MYSQL_USER=duoletest \
-        -e MYSQL_DATABASE=test_zhuoji 
+        -e MYSQL_DATABASE=test_zhuoji \
         -v /path/to/your/sql.gz/file/duole.sql.gz:/docker-entrypoint-initdb.d/duole.sql.gz \
         -p 3306:3306 \
         -d circleci/mysql:5.7.36
