@@ -9,7 +9,7 @@ class Uwsgi < Formula
     depends_on "pkgconf" => :build
     depends_on "openssl@3"
     depends_on "pcre2"
-    depends_on "python@3.13"
+    depends_on "python@3.10"
     depends_on "sqlite"
     depends_on "yajl"
     depends_on "python@2"
@@ -25,7 +25,7 @@ class Uwsgi < Formula
     end
   
     def python3
-      "python3.13"
+      "python3.10"
     end
 
     def python27
@@ -78,6 +78,12 @@ class Uwsgi < Formula
       system python27, "uwsgiconfig.py", "--verbose", "--plugin", "plugins/python", "brew", "python"
   
       bin.install "uwsgi"
+    end
+
+    def post_install
+      (HOMEBREW_PREFIX/"etc/uwsgi/apps-enabled").mkpath
+      (HOMEBREW_PREFIX/"var/run/uwsgi").mkpath
+      (HOMEBREW_PREFIX/"var/log/uwsgi/app").mkpath
     end
   
     service do
