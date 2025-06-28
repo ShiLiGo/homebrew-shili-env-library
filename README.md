@@ -43,6 +43,8 @@
     #Xcode启动 C++程序时可能会遇到的问题
     1、/Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf: No such file or directory, file = /Users/lishi/Library/Developer/Xcode/DerivedData/gjservice-efvdxormtnrwhwanrmlwlfdabdae/Build/Products/Debug/gjfkldteamarbiter.conf) in CLuaIni::LoadFile()
     解决方案：顶部菜单栏->Product->Show Build Folder in Finder->进入 ./Products/Debug，拷贝缺少的配置文件和目录到当前目录下
+    2、M 系列芯片运行 C++程序 Build Failed
+    解决方案：todo
 
 ### homebrew
 
