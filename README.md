@@ -10,14 +10,17 @@
 ### homebrew
     #切换终端环境至x86
     arch -x86_64 zsh
+
     # 下载安装脚本
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh > homebrew-install.sh
+
     # 切换安装包源，加速下载
     echo 'export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"' >> ~/.bash_profile
     echo 'export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"' >> ~/.bash_profile
     echo 'export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"' >> ~/.bash_profile
     echo 'export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"' >> ～/.bash_profile
     source ~/.bash_profile
+    
     # 执行安装脚本
     bash homebrew-install.sh
 
@@ -43,20 +46,24 @@
 
     #homebrew 默认工作目录 /usr/local
     本机环境的 uwsgi、nginx 的工作目录和日志目录都在 Linux 目录的基础上加上 /usr/local
+
     # C++程序依赖库
     brew install lua libevent hiredis log4cplus hiredis jsoncpp ossp-uuid openssl curl 
     brew tap shiligo/shili-env-library/mysql-client@5.7
     brew install shiligo/shili-env-library/mysql-client@5.7
     brew install shiligo/shili-env-library/mysql-client@250
+
     # Python程序依赖库
     brew install python@3.10 
     brew install shiligo/shili-env-library/uwsgi 
     brew install shiligo/shili-env-library/nginx
+
     # 创建 Python 虚拟环境
     mkdir -p /usr/local/var/www/python-venvs && cd /usr/local/var/www/python-venvs
     python3 -m venv my-env
     source my-env/bin/activate
     pip install -r my-requirement.txt
+
     #nginx 默认工作目录
     /usr/local/etc/nginx
     #启动 nginx 服务
@@ -67,10 +74,12 @@
     brew service start uwsgi
 
 ### VSCode
+    
     #Python项目设置终端默认进入虚拟环境
     1、右下角选择 Python 版本
     2、输入解释器路径
     3、输入 /usr/local/var/www/python-venvs/my-env/bin/python
+
     #Python项目配置调试启动
     1、左侧侧边栏-运行和调试
     2、创建 launch.json 文件
@@ -94,11 +103,13 @@
         ]
     }
     5、运行-启动调试（断点调试）、以非调试模式运行（前台启动）
+
     #Python项目配置调试启动可能会碰到的问题
     1、ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/Cellar/python@3.10/3.10.18/Frameworks/Python.framework/Versions/3.10/lib/python3.10/collections/__init__.py)
     解决方案: pip install --upgrade PyJWT
     
 ### sequel ace
+    
     #远端MySQL数据导出
     1、打开sequel ace
     2、通过SSH连接数据库
@@ -111,6 +122,7 @@
     "registry-mirrors": [
         "https://docker.xuanyuan.me"
     ]
+
     #启动本地 MySQL 和 Redis 数据库
     1、下载最新的 redis 文件备份（rdb 文件）
     2、拉取 redis 镜像
