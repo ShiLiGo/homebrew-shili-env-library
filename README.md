@@ -55,8 +55,12 @@
     python3 -m venv my-env
     source my-env/bin/activate
     pip install -r my-requirement.txt
+    #nginx 默认工作目录
+    /usr/local/etc/nginx
     #启动 nginx 服务
     brew services start nginx
+    #uwsgi 默认工作目录
+    /usr/local/etc/uwsgi/apps-enabled/
     #启动 uwsgi 服务
     brew service start uwsgi
 
