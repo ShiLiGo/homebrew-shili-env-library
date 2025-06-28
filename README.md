@@ -97,7 +97,7 @@
     解决方案: pip install --upgrade PyJWT
     
 ### sequel ace
-
+    #远端MySQL数据导出
     1、打开sequel ace
     2、通过SSH连接数据库
     3、File->Export->自定义文件名 duole.sql.gz，Table 的表选项中，S、C 都全选（如果想要一个全新的数据库，C不要选，C的意思是content）->export
