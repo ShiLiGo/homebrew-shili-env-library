@@ -66,7 +66,7 @@
     本机环境的 uwsgi、nginx 的工作目录和日志目录都在 Linux 目录的基础上加上 /usr/local
 
     # C++程序依赖库
-    brew install lua libevent hiredis log4cplus hiredis jsoncpp ossp-uuid openssl curl 
+    brew install lua libevent hiredis log4cplus boost hiredis jsoncpp ossp-uuid openssl curl 
     brew tap shiligo/shili-env-library/mysql-client@5.7
     brew install shiligo/shili-env-library/mysql-client@5.7
     brew install shiligo/shili-env-library/mysql-client@250
